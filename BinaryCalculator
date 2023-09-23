@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class BinaryConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a binary number: ");
+        String binaryInput = scanner.nextLine();
+
+        // Convert binary to decimal
+        int decimalValue = Integer.parseInt(binaryInput, 2);
+
+        // Convert binary to hexadecimal
+        String hexadecimalValue = Integer.toHexString(decimalValue);
+
+        // Convert binary to octal
+        String octalValue = Integer.toOctalString(decimalValue);
+
+        System.out.println("Decimal: " + decimalValue);
+        System.out.println("Hexadecimal: " + hexadecimalValue);
+        System.out.println("Octal: " + octalValue);
+
+        scanner.close();
+    }
+}
